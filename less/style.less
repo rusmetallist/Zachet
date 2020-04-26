@@ -1,0 +1,132 @@
+@import "variables.less";
+@import "mixins.less";
+@import "container.less";
+/*@import "header.less";*/
+@import "content.less";
+@import "footer.less";
+
+.main-header {
+    min-height: @height;
+    .txt-ral;
+    /*padding: 3.9% 7.8%;*/
+    background-color: @fon;
+    background: url(../img/header-photo.jpg) no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+}
+
+.up-header {
+    padding: 40px 19% 0 19%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*.logo {
+    margin: 0;
+    padding: 0 11% 0 0;
+    width: 181px;
+    height: 56px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo svg {
+    fill: red;
+}
+
+.logo > span {
+    margin: 0;
+    display: block;
+    color: #fff;
+    margin: 0;
+    padding: 10px 0 0 0;
+    font: 34px 'Raleway', 'Myriad Pro';
+    letter-spacing: -1.36px;
+    text-align: right;
+}*/
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 9, 4%;
+    margin: 0;
+    padding: 0 11.5% 0 0;
+}
+
+.nav {
+    width: 34.1%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 3.3% 0 0;
+}
+
+.nav > .list {
+    list-style-type: none;
+    margin: 0;
+}
+
+.list > a {
+    text-decoration: none;
+    .txt-mont;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+@media (max-width: 1400px) {
+    .list > a {
+        font-size: 9px;
+        color: red;
+    }
+}
+
+.icon {
+    width: 3.7%;;
+    justify-content: flex-end;
+}
+
+.shopping-bag > svg {
+    fill: #fff;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.shopping-bag {
+    width: 18px;
+    height: 24px;
+    outline: none;
+    border: none;
+    background-color: #393b3c;
+    margin: 0 auto;
+    padding: 0 1.5% 0 0;
+}
+
+.search {
+    width: 24px;
+    height: 24px;
+    outline: none;
+    border: none;
+    background-color: #393b3c;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.search > svg {
+    fill: #fff;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.shopping-bag > svg:hover,
+.search > svg:hover {
+    .button_hover;
+}
+@media (max-width: 1400px) {
+    .search > svg {
+        min-width: 1.2%;
+    }
+    .shopping-bag > svg {
+        min-width: 1%;;
+    }
+}
