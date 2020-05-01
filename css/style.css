@@ -4,31 +4,80 @@ body {
     padding: 0;
 }
 
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/montserrat-light.ttf)
+}
+
+@font-face {
+    font-family: raleway-medium;
+    src: url(../fonts/raleway-medium.ttf)
+}
+
+@font-face {
+    font-family: raleway-semi;
+    src: url(../fonts/raleway-semi.ttf)
+}
+
+@font-face {
+    font-family: raleway-extrabold;
+    src: url(../fonts/raleway-extrabold.ttf)
+}
+
+@font-face {
+    font-family: raleway-normal;
+    src: url(../fonts/raleway-regular.ttf)
+}
+
 .main-header {
     width: 1920px;
     min-height: 1024px;
     background: url(../img/header-photo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 .up-header {
     display: flex;
-    box-sizing: border-box
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 40px 375px 0 375px;
+    margin: 0 auto;
 }
 
 .logo {
     margin: 0;
-    display: block;
-    width: 179px;
+    width: 181px;
     height: 56px;
-    padding: 40px 0 0 376px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.logo svg {
+    fill: #fff;
+}
+
+.logo > span {
+    margin: 0;
+    display: block;
+    color: #fff;
+    margin: 0;
+    padding: 10px 0 0 0;
+    font-family: raleway-normal;
+    font-size: 34px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -1.36px;
+    text-align: right;
+    color: #ffffff;
 }
 
 .nav {
     margin: 0;
-    padding: 61px 0 0 219px;
+    padding: 22px 0 0 219px;
     width: 640px;
     display: flex;
     justify-content: space-between;
@@ -36,7 +85,7 @@ body {
 }
 
 .list a {
-    font-family: Montserrat;
+    font-family: montserrat;
     font-size: 14px;
     font-weight: 300;
     font-stretch: normal;
@@ -44,7 +93,7 @@ body {
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -52,14 +101,16 @@ body {
     color: #c7b299;
 }
 
-.icon {
-    padding: 55px 0 0 63px;
+.list .list-active {
+    color: #7f7f7f;
 }
 
-.shopping-bag > svg {
-    fill: #fff;
-    margin: 0 auto;
-    padding: 0;
+.icon {
+    min-height: 24px;
+    min-width: 70px;
+    padding: 15px 0 0 63px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .shopping-bag {
@@ -67,33 +118,65 @@ body {
     height: 24px;
     outline: none;
     border: none;
-    background-color: #393b3c;
-    margin: 0 auto;
+    background-color: transparent;
+    margin: 0 28px 0 0;
+}
 
+.shopping-bag > svg {
+    fill: #fff;
 }
 
 .shopping-bag > svg:hover {
     fill: #c7b299;
 }
 
-.search > svg:hover {
-    fill: #c7b299;
-}
-
-.search {
+.iconform {
     width: 24px;
     height: 24px;
     outline: none;
     border: none;
-    background-color: #393b3c;
-    margin: 0 0 0 28px;
+    background-color: transparent;
     padding: 0;
+    position: relative;
 }
 
-.search > svg {
-    fill: #fff;
-    margin: 0 auto;
-    padding: 0;
+.iconlabel {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.iconsearch {
+    width: 0;
+    min-height: 0;
+    box-sizing: border-box;
+    outline: none;
+    padding: 5px;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    font-family: montserrat;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+    color: #fff;
+}
+
+.iconform:hover {
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.iconsearch:focus {
+    width: 150px;
+    min-height: 20px;
+    transition: width 1s ease;
+    border: 2px solid #fff;
 }
 
 .header-text {
@@ -105,7 +188,7 @@ body {
 }
 
 .h2 {
-    font-family: Raleway;
+    font-family: raleway-medium;
     font-size: 36px;
     font-weight: 500;
     font-stretch: normal;
@@ -118,7 +201,7 @@ body {
 }
 
 .h1 {
-    font-family: Raleway;
+    font-family: raleway-extrabold;
     font-size: 52px;
     font-weight: 800;
     font-stretch: normal;
@@ -131,7 +214,7 @@ body {
 }
 
 .header-p {
-    font-family: Montserrat;
+    font-family: montserrat;
     font-size: 16px;
     font-weight: 300;
     font-stretch: normal;
@@ -143,24 +226,19 @@ body {
     margin: 0px 0 44px 0;
 }
 
-
-}
-
 .get {
     display: block;
     width: 170px;
-    height: 53px;
     border-radius: 3px;
     box-shadow: inset 0px -3px 0 0 #736357;
     background-color: #998675;
     text-align: center;
     box-sizing: border-box;
     text-decoration: none;
-    padding: 17px 0 0 0;
 }
 
-.start {
-    font-family: Raleway;
+.get > span {
+    font-family: raleway-extrabold;
     font-size: 14px;
     font-weight: 800;
     font-stretch: normal;
@@ -170,5 +248,88 @@ body {
     text-align: center;
     color: #ffffff;
     text-transform: uppercase;
+    display: block;
+    padding: 16px 38px;
+    margin: 0 auto;
+}
 
+.get:hover {
+    box-shadow: inset 0px -3px 0 0 #fff;
+    background-color: #7f7f7f;
+}
+
+.get:active {
+    background-color: #fff;
+}
+
+.get > span:active {
+    color: #7f7f7f;
+}
+
+.arrow-header {
+    display: flex;
+    justify-content: space-between;
+    margin: -155px 0 auto;
+    padding: 0 150px 0 150px;
+}
+
+.arrow-left {
+    display: block;
+    width: 53px;
+    height: 53px;
+    box-sizing: border-box;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    opacity: 0.5;
+    transform: rotate(225deg);
+}
+
+.arrow-left:hover {
+    opacity: 1;
+}
+
+.arrow-right {
+    display: block;
+    width: 53px;
+    height: 53px;
+    box-sizing: border-box;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    opacity: 0.5;
+    transform: rotate(45deg);
+}
+
+.arrow-right:hover {
+    opacity: 1;
+}
+
+.pagonation {
+    width: 100px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 421px;
+    align-items: center;
+}
+
+.pag-link {
+    display: block;
+    width: 11px;
+    height: 11px;
+    opacity: 0.5;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.pag-active {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: solid 2px #d3c1ad;
+    background-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
 }
